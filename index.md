@@ -94,7 +94,7 @@ codex                     # Codex CLI (nếu đã cài --codex)
 ### 3. Generate docs
 
 ```
-/docs init
+/mk:docs init
 ```
 
 AI scan codebase và tạo documentation trong `docs/`.
@@ -125,13 +125,13 @@ Copilot sẽ tự đọc `CLAUDE.md`, `.claude/rules/`, `.claude/skills/`.
 
 | Lệnh | Khi nào dùng |
 |---|---|
-| `/cook "feature X"` | Implement feature mới (plan → code → test → review) |
-| `/fix "bug Y"` | Gặp bug cần fix |
-| `/test` | Chạy tests + xem coverage |
-| `/code-review` | Review code trước khi merge |
-| `/ship` | Ship to production (test → review → commit → push → PR) |
+| `/mk:cook "feature X"` | Implement feature mới (plan → code → test → review) |
+| `/mk:fix "bug Y"` | Gặp bug cần fix |
+| `/mk:test` | Chạy tests + xem coverage |
+| `/mk:code-review` | Review code trước khi merge |
+| `/mk:ship` | Ship to production (test → review → commit → push → PR) |
 | `/mk:plan "task"` | Lên kế hoạch trước khi làm task phức tạp |
-| `/docs init` | Tạo docs cho project |
+| `/mk:docs init` | Tạo docs cho project |
 
 ---
 
@@ -141,7 +141,7 @@ Copilot sẽ tự đọc `CLAUDE.md`, `.claude/rules/`, `.claude/skills/`.
 
 - **Viết CLAUDE.md càng cụ thể càng tốt** — AI đọc file này mỗi lần bạn gõ prompt. Càng rõ context → AI càng chính xác.
 - **Bắt đầu task lớn bằng `/mk:plan`** — AI chia nhỏ thành phases, dễ track và rollback.
-- **Dùng `/cook` thay vì prompt thủ công** — tự chạy pipeline plan → code → test → review.
+- **Dùng `/mk:cook` thay vì prompt thủ công** — tự chạy pipeline plan → code → test → review.
 - **Xóa skills không dùng** cho gọn:
   ```bash
   rm -rf .claude/skills/shopify .claude/skills/threejs .claude/skills/shader
