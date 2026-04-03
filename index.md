@@ -182,6 +182,26 @@ npx my-agent-kit init --force       # Ghi đè .claude/ bằng bản mới nhấ
 
 ---
 
+## Workflow Guides
+
+33 hướng dẫn theo tình huống thực tế cho 9 vai trò:
+
+**[→ Xem tất cả Workflow Guides](guides/)**
+
+| Vai trò | Guides |
+|---|---|
+| [Developer](guides/developer) | Xây feature, fix bug, test, refactor, ship |
+| [Solopreneur](guides/solopreneur) | MVP, landing page, payment |
+| [Tech Lead](guides/tech-lead) | Review PR, plan sprint, security audit |
+| [PM / Product](guides/pm) | PRD, feasibility, tracking |
+| [Designer](guides/designer) | Design → code, UI review, design system |
+| [QA / Tester](guides/qa) | Test suite, UI test, regression |
+| [DevOps](guides/devops) | CI/CD, Docker, hotfix |
+| [Tech Writer](guides/tech-writer) | API docs, slides, release notes |
+| [Researcher](guides/researcher) | Codebase analysis, documents, research |
+
+---
+
 ## Links
 
 - **npm:** [npmjs.com/package/my-agent-kit](https://www.npmjs.com/package/my-agent-kit)
