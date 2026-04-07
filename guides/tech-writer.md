@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Tech Writer Workflows — My Agent Kit
+title: Tech Writer
+parent: Workflow Guides
+nav_order: 8
 ---
 
 # Tech Writer Workflows

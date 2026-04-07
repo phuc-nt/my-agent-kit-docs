@@ -1,6 +1,8 @@
 ---
 layout: default
-title: DevOps Workflows — My Agent Kit
+title: DevOps
+parent: Workflow Guides
+nav_order: 7
 ---
 
 # DevOps Workflows

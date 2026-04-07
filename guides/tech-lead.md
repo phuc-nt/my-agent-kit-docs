@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Tech Lead Workflows — My Agent Kit
+title: Tech Lead
+parent: Workflow Guides
+nav_order: 3
 ---
 
 # Tech Lead Workflows

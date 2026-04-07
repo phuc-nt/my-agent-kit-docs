@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Designer Workflows — My Agent Kit
+title: Designer
+parent: Workflow Guides
+nav_order: 5
 ---
 
 # Designer Workflows

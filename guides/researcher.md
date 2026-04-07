@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Researcher Workflows — My Agent Kit
+title: Researcher
+parent: Workflow Guides
+nav_order: 9
 ---
 
 # Researcher Workflows

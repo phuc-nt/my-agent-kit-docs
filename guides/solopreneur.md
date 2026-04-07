@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Solopreneur Workflows — My Agent Kit
+title: Solopreneur
+parent: Workflow Guides
+nav_order: 2
 ---
 
 # Solopreneur Workflows

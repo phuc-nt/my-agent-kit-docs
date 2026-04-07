@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Developer Workflows — My Agent Kit
+title: Developer
+parent: Workflow Guides
+nav_order: 1
 ---
 
 # Developer Workflows

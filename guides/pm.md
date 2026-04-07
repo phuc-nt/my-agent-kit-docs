@@ -1,6 +1,8 @@
 ---
 layout: default
-title: PM / Product Workflows — My Agent Kit
+title: PM / Product
+parent: Workflow Guides
+nav_order: 4
 ---
 
 # PM / Product Workflows

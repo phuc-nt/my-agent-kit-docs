@@ -1,6 +1,8 @@
 ---
 layout: default
-title: QA / Tester Workflows — My Agent Kit
+title: QA / Tester
+parent: Workflow Guides
+nav_order: 6
 ---
 
 # QA / Tester Workflows

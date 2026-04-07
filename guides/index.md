@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Workflow Guides — My Agent Kit
+title: Workflow Guides
+nav_order: 2
+has_children: true
+permalink: /guides/
 ---
 
 # Workflow Guides
