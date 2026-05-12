@@ -2,20 +2,34 @@
 layout: default
 title: Installation
 nav_order: 1
-description: "Install My Agent Kit — 14 agents, 80+ skills, 15 hooks for Claude Code."
+description: "Install My Agent Kit — 14 agents, 90+ skills, 20+ hooks for Claude Code."
 permalink: /
 ---
 
 # My Agent Kit
 {: .fs-9 }
 
-AI coding agent kit — 14 agents, 80+ skills, 15 hooks, structured workflows.
+AI coding agent kit — 14 agents, 90+ skills, 20+ hooks, structured workflows.
 {: .fs-6 .fw-300 }
 
 Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI, Cursor, Windsurf, and others.
 
 [Get started — npx my-agent-kit init](#install){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [GitHub](https://github.com/phuc-nt/my-agent-kit){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+---
+
+## What's New in v2.0.0
+
+- **6 skills mới:** `agentize`, `cti-expert`, `excalidraw`, `graphify`, `show-off`, `xia`
+- **`fix` skill v2.0** — pipeline có cấu trúc: root cause → repro → minimal fix → regression test
+- **`mk:plan` overhaul** — scoped plans với verification roles
+- **Flag `--upgrade`** — clean migration từ bản cũ (xem [Cập nhật kit](#cập-nhật-kit))
+- **Statusline mới** — config-driven, theme parity giữa compact/minimal/full
+- **3 agents mới:** `code-simplifier`, `journal-writer`, `mcp-manager`
+
+⚠️ **Breaking:** `/mk:loop` → `/mk:autoresearch`, agent `simplifier` → `code-simplifier`.
+Xem [CHANGELOG đầy đủ](https://github.com/phuc-nt/my-agent-kit/blob/main/CHANGELOG.md).
 
 ---
 
@@ -51,6 +65,7 @@ cd my-agent-kit
 |---|---|
 | `--dry-run` | Xem trước, không cài |
 | `--force` | Ghi đè nếu đã cài trước đó |
+| `--upgrade` | Clean upgrade — xóa các file cũ đã bị loại bỏ trước khi copy bản mới |
 | `--skills-install` | Cài thêm Python dependencies cho AI skills |
 | `--copilot` | Tạo `.github/copilot-instructions.md` |
 | `--codex` | Tạo `.codex/config.toml` + `.agents/skills/` symlink |
@@ -64,7 +79,7 @@ Project sẽ có:
 
 ```
 your-project/
-├── .claude/          ← 14 agents, 80+ skills, 15 hooks, rules
+├── .claude/          ← 14 agents, 90+ skills, 20+ hooks, rules
 ├── CLAUDE.md         ← Instructions cho Claude Code + Copilot
 ├── AGENTS.md         ← Instructions cho Codex CLI + 6 tools khác
 ├── plans/            ← Thư mục kế hoạch
@@ -172,10 +187,23 @@ Copilot sẽ tự đọc `CLAUDE.md`, `.claude/rules/`, `.claude/skills/`.
 ## Cập nhật kit
 
 ```bash
-npx my-agent-kit init --force       # Ghi đè .claude/ bằng bản mới nhất
+# Clean upgrade — drops files đã bị loại bỏ ở phiên bản mới
+npx my-agent-kit init . --upgrade --force
+
+# Hoặc full reinstall (mất customizations trong .claude/)
+npx my-agent-kit init --force
 ```
 
 > **Lưu ý:** `CLAUDE.md` sẽ bị ghi đè khi dùng `--force` — backup trước nếu đã customize.
+
+### Nâng cấp từ v1.0.0 → v2.0.0
+
+Có một số rename cần biết:
+- Slash command: `/mk:loop` → `/mk:autoresearch`
+- Agent: `simplifier` → `code-simplifier`
+- Agents đã xóa: `scout`, `scout-external`, `copywriter`, `database-admin`
+
+Chạy `npx my-agent-kit init . --upgrade --force` để dọn rác tự động.
 
 ---
 
@@ -183,7 +211,7 @@ npx my-agent-kit init --force       # Ghi đè .claude/ bằng bản mới nhấ
 
 | Tool | Đọc gì | Hỗ trợ |
 |---|---|---|
-| **Claude Code** | `CLAUDE.md` + full `.claude/` | Đầy đủ (14 agents, 80+ skills, 15 hooks) |
+| **Claude Code** | `CLAUDE.md` + full `.claude/` | Đầy đủ (14 agents, 90+ skills, 20+ hooks) |
 | **GitHub Copilot** | `CLAUDE.md` + `.claude/rules/` + `.claude/skills/` | Native từ VS Code 1.108 |
 | **Codex CLI** | `AGENTS.md` + `.codex/config.toml` + `.agents/skills/` | Qua config + symlink |
 | **Cursor / Windsurf** | `AGENTS.md` | Chỉ instructions |
