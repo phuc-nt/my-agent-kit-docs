@@ -15,7 +15,7 @@ AI coding agent kit — 14 agents, 90+ skills, 20+ hooks, structured workflows.
 Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI, Cursor, Windsurf, and others.
 
 [Get started — npx my-agent-kit init](#install){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[GitHub](https://github.com/phuc-nt/my-agent-kit){: .btn .fs-5 .mb-4 .mb-md-0 }
+[npm](https://www.npmjs.com/package/my-agent-kit){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -29,7 +29,7 @@ Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI
 - **3 agents mới:** `code-simplifier`, `journal-writer`, `mcp-manager`
 
 ⚠️ **Breaking:** `/mk:loop` → `/mk:autoresearch`, agent `simplifier` → `code-simplifier`.
-Xem [CHANGELOG đầy đủ](https://github.com/phuc-nt/my-agent-kit/blob/main/CHANGELOG.md).
+Xem mục [Nâng cấp từ v1.0.0 → v2.0.0](#nâng-cấp-từ-v100--v200).
 
 ---
 
@@ -49,14 +49,6 @@ npx my-agent-kit init --all
 
 # Xem trước sẽ tạo gì
 npx my-agent-kit init --dry-run
-```
-
-### Via git clone
-
-```bash
-git clone https://github.com/phuc-nt/my-agent-kit.git
-cd my-agent-kit
-./mk-init.sh /path/to/your-project --all
 ```
 
 ### Options
@@ -241,4 +233,3 @@ Chạy `npx my-agent-kit init . --upgrade --force` để dọn rác tự động
 ## Links
 
 - **npm:** [npmjs.com/package/my-agent-kit](https://www.npmjs.com/package/my-agent-kit)
-- **GitHub:** [github.com/phuc-nt/my-agent-kit](https://github.com/phuc-nt/my-agent-kit)

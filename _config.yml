@@ -20,14 +20,12 @@ search:
 nav_sort: order
 
 aux_links:
-  "GitHub":
-    - "https://github.com/phuc-nt/my-agent-kit"
   "npm":
     - "https://www.npmjs.com/package/my-agent-kit"
 
 aux_links_new_tab: true
 
-footer_content: "MIT License &middot; <a href=\"https://github.com/phuc-nt/my-agent-kit\">GitHub</a> &middot; <a href=\"https://www.npmjs.com/package/my-agent-kit\">npm</a>"
+footer_content: "MIT License &middot; <a href=\"https://www.npmjs.com/package/my-agent-kit\">npm</a>"
 
 back_to_top: true
 back_to_top_text: "Back to top"
