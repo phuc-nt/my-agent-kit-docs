@@ -19,7 +19,22 @@ Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI
 
 ---
 
-## What's New in v2.0.0
+## What's New
+
+### v2.0.1 (mới nhất)
+
+> 🐛 **Nếu bạn cài v2.0.0 và thấy commands hiện `/ck:` thay vì `/mk:`** — đây là
+> bug đã được sửa ở v2.0.1. Chạy:
+>
+> ```bash
+> npx my-agent-kit@latest init . --upgrade --force
+> ```
+
+- Sửa 246 files còn sót prefix `ck:` (đáng lẽ là `mk:`) từ bản v2.0.0
+- Sửa tài liệu trỏ nhầm `.ck.json`/`.ckignore` → đúng `.mk.json`/`.mkignore`
+- Thuần bug fix — không đổi tính năng, không breaking
+
+### v2.0.0
 
 - **6 skills mới:** `agentize`, `cti-expert`, `excalidraw`, `graphify`, `show-off`, `xia`
 - **`fix` skill v2.0** — pipeline có cấu trúc: root cause → repro → minimal fix → regression test
@@ -29,7 +44,7 @@ Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI
 - **3 agents mới:** `code-simplifier`, `journal-writer`, `mcp-manager`
 
 ⚠️ **Breaking:** `/mk:loop` → `/mk:autoresearch`, agent `simplifier` → `code-simplifier`.
-Xem mục [Nâng cấp từ v1.0.0 → v2.0.0](#nâng-cấp-từ-v100--v200).
+Xem mục [Nâng cấp từ v1.0.0 → v2.x](#nâng-cấp-từ-v100--v2x).
 
 ---
 
@@ -188,7 +203,17 @@ npx my-agent-kit init --force
 
 > **Lưu ý:** `CLAUDE.md` sẽ bị ghi đè khi dùng `--force` — backup trước nếu đã customize.
 
-### Nâng cấp từ v1.0.0 → v2.0.0
+### Đã cài v2.0.0, commands hiện `/ck:`?
+
+Bug đã sửa ở **v2.0.1**. Chạy đúng 1 lệnh:
+
+```bash
+npx my-agent-kit@latest init . --upgrade --force
+```
+
+Sau đó commands sẽ hiện đúng `/mk:cook`, `/mk:fix`, `/mk:docs`…
+
+### Nâng cấp từ v1.0.0 → v2.x
 
 Có một số rename cần biết:
 - Slash command: `/mk:loop` → `/mk:autoresearch`
