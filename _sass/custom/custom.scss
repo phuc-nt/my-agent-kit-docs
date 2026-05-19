@@ -1,0 +1,23 @@
+// Loaded last by just-the-docs — final overrides.
+
+// Non-primary .btn (e.g. the "npm" hero button) sits on a light grey
+// base now; force readable dark-orange text + a visible border so it
+// no longer renders orange-on-orange.
+.btn:not(.btn-primary):not(.btn-blue):not(.btn-green):not(.btn-purple) {
+  color: #c0341a;
+  border: 1px solid rgba(192, 52, 26, 0.35);
+
+  &:hover {
+    color: #a02a14;
+    background-color: #ececec;
+  }
+}
+
+// Aux link ("npm", top-right): bump contrast on the white header.
+.aux-nav-listitem a {
+  color: #c0341a;
+
+  &:hover {
+    color: #a02a14;
+  }
+}

@@ -1,9 +1,12 @@
 // My Agent Kit brand color scheme
 // Accent: #e04422 (from social preview)
 
-$link-color: #d93b1d;
+$link-color: #c0341a;
 $btn-primary-color: #e04422;
 $nav-list-link-color: $grey-dk-100;
 $nav-list-link-color-active: $link-color;
 $sidebar-color: $white;
-$base-button-color: #e04422;
+// Non-primary .btn: just-the-docs paints it on $base-button-color.
+// Keep it light grey so the orange link text stays readable
+// (orange-on-orange was unreadable — see screenshot fix).
+$base-button-color: $grey-lt-100;
