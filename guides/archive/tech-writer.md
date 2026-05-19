@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Tech Writer
-parent: Workflow Guides
+parent: Archived (by persona)
+grand_parent: Workflow Guides
 nav_order: 8
 ---
 

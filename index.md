@@ -237,21 +237,21 @@ Chạy `npx my-agent-kit init . --upgrade --force` để dọn rác tự động
 
 ## Workflow Guides
 
-33 hướng dẫn theo tình huống thực tế cho 9 vai trò:
+Hướng dẫn **theo loại project** — đọc [Lõi bất biến](guides/core) trước
+(5-agent chain + ~9 skill lõi xử lý ~90% mọi project), rồi thêm theo loại:
 
 **[→ Xem tất cả Workflow Guides](guides/)**
 
-| Vai trò | Guides |
+| Loại project | Khi nào |
 |---|---|
-| [Developer](guides/developer) | Xây feature, fix bug, test, refactor, ship |
-| [Solopreneur](guides/solopreneur) | MVP, landing page, payment |
-| [Tech Lead](guides/tech-lead) | Review PR, plan sprint, security audit |
-| [PM / Product](guides/pm) | PRD, feasibility, tracking |
-| [Designer](guides/designer) | Design → code, UI review, design system |
-| [QA / Tester](guides/qa) | Test suite, UI test, regression |
-| [DevOps](guides/devops) | CI/CD, Docker, hotfix |
-| [Tech Writer](guides/tech-writer) | API docs, slides, release notes |
-| [Researcher](guides/researcher) | Codebase analysis, documents, research |
+| [Lõi bất biến](guides/core) | Đọc đầu tiên — đúng cho mọi project |
+| [CLI / single-binary](guides/cli-tool) | Tool dòng lệnh, spec-locked, binary tĩnh |
+| [Web full-stack](guides/web-fullstack) | React/Next + API + DB |
+| [Infra / DevOps](guides/infra-devops) | CI/CD, container, cloud, IaC, incident |
+| [Rules of thumb](guides/rules-of-thumb) | Nguyên tắc áp cho mọi loại |
+
+> Bộ guide cũ theo vai trò (Developer, Tech Lead, QA…) đã chuyển sang
+> [Archived (by persona)](guides/archive/).
 
 ---
 
