@@ -19,32 +19,15 @@ Built for **Claude Code**, with cross-tool support for GitHub Copilot, Codex CLI
 
 ---
 
-## What's New
+## Tính năng nổi bật
 
-### v2.0.1 (mới nhất)
-
-> 🐛 **Nếu bạn cài v2.0.0 và thấy commands hiện `/ck:` thay vì `/mk:`** — đây là
-> bug đã được sửa ở v2.0.1. Chạy:
->
-> ```bash
-> npx my-agent-kit@latest init . --upgrade --force
-> ```
-
-- Sửa 246 files còn sót prefix `ck:` (đáng lẽ là `mk:`) từ bản v2.0.0
-- Sửa tài liệu trỏ nhầm `.ck.json`/`.ckignore` → đúng `.mk.json`/`.mkignore`
-- Thuần bug fix — không đổi tính năng, không breaking
-
-### v2.0.0
-
-- **6 skills mới:** `agentize`, `cti-expert`, `excalidraw`, `graphify`, `show-off`, `xia`
-- **`fix` skill v2.0** — pipeline có cấu trúc: root cause → repro → minimal fix → regression test
-- **`mk:plan` overhaul** — scoped plans với verification roles
-- **Flag `--upgrade`** — clean migration từ bản cũ (xem [Cập nhật kit](#cập-nhật-kit))
-- **Statusline mới** — config-driven, theme parity giữa compact/minimal/full
-- **3 agents mới:** `code-simplifier`, `journal-writer`, `mcp-manager`
-
-⚠️ **Breaking:** `/mk:loop` → `/mk:autoresearch`, agent `simplifier` → `code-simplifier`.
-Xem mục [Nâng cấp từ v1.0.0 → v2.x](#nâng-cấp-từ-v100--v2x).
+- **14 agents** — chuỗi chuyên trách: planner → fullstack-developer → code-simplifier → tester → code-reviewer, cùng researcher / debugger / git-manager gọi khi cần
+- **90+ skills** — `cook`, `mk:plan`, `mk:fix`, `mk:test`, `mk:debug`, `mk:ship`, `docs-seeker`, `scout`, `sequential-thinking`… bật theo task
+- **20+ hooks** — tự động hóa theo sự kiện (session-init, privacy-block, dev-rules-reminder…)
+- **`fix` pipeline** — root cause → repro → minimal fix → regression test
+- **Statusline config-driven** — theme parity giữa chế độ compact / minimal / full
+- **Workflow guides theo loại project** — chọn đúng skill cho CLI / web / infra → xem [Workflow Guides](guides/)
+- **Cross-tool** — Claude Code đầy đủ; Copilot, Codex CLI, Cursor, Windsurf qua `CLAUDE.md` / `AGENTS.md`
 
 ---
 
@@ -203,24 +186,8 @@ npx my-agent-kit init --force
 
 > **Lưu ý:** `CLAUDE.md` sẽ bị ghi đè khi dùng `--force` — backup trước nếu đã customize.
 
-### Đã cài v2.0.0, commands hiện `/ck:`?
-
-Bug đã sửa ở **v2.0.1**. Chạy đúng 1 lệnh:
-
-```bash
-npx my-agent-kit@latest init . --upgrade --force
-```
-
-Sau đó commands sẽ hiện đúng `/mk:cook`, `/mk:fix`, `/mk:docs`…
-
-### Nâng cấp từ v1.0.0 → v2.x
-
-Có một số rename cần biết:
-- Slash command: `/mk:loop` → `/mk:autoresearch`
-- Agent: `simplifier` → `code-simplifier`
-- Agents đã xóa: `scout`, `scout-external`, `copywriter`, `database-admin`
-
-Chạy `npx my-agent-kit init . --upgrade --force` để dọn rác tự động.
+`--upgrade` đọc danh sách file đã loại bỏ và dọn sạch trước khi copy bản mới,
+nên không để lại rác từ lần cài cũ.
 
 ---
 
